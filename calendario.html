@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario y Agenda - Chile</title>
+    <link rel="stylesheet" href="calendario.css">
+</head>
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="container calendario-container">
+        <!-- Botón para volver al menú principal (cambiado) -->
+        <div class="back-link">
+            <a href="main.html">⬅ Volver al menú principal</a>
+        </div>
+
+        <h2><span class="text-blue">Calendario</span> <span class="text-red">Chile</span></h2>
+
+        <!-- Navegación del mes -->
+        <div class="nav-mes">
+            <button id="prevMonth" class="nav-btn">◀</button>
+            <span id="monthYear" class="mes-titulo">Enero 2026</span>
+            <button id="nextMonth" class="nav-btn">▶</button>
+        </div>
+
+        <!-- Tabla del calendario -->
+        <table class="calendario-tabla">
+            <thead>
+                <tr>
+                    <th>Lun</th>
+                    <th>Mar</th>
+                    <th>Mié</th>
+                    <th>Jue</th>
+                    <th>Vie</th>
+                    <th>Sáb</th>
+                    <th>Dom</th>
+                </tr>
+            </thead>
+            <tbody id="calendarioBody">
+                <!-- Las filas se generan con JavaScript -->
+            </tbody>
+        </table>
+
+        <!-- Leyenda -->
+        <div class="leyenda">
+            <span class="leyenda-item"><span class="feriado-marca">🔴</span> Feriado</span>
+            <span class="leyenda-item"><span class="actividad-marca">🟢</span> Con actividad</span>
+        </div>
+
+        <!-- Panel de actividades del día seleccionado -->
+        <div class="panel-actividades">
+            <h3 id="fechaSeleccionada">Selecciona un día</h3>
+            <ul id="listaActividades">
+                <li>No hay actividades para este día.</li>
+            </ul>
+            <div class="agregar-actividad">
+                <input type="text" id="nuevaActividad" placeholder="Escribe una actividad...">
+                <button id="agregarBtn">➕ Agregar</button>
+            </div>
+            <button id="eliminarDiaBtn" class="btn-eliminar-dia">🗑️ Eliminar todas las actividades del día</button>
+        </div>
+
+        <!-- Firma del desarrollador -->
+        <div class="caja-firma">
+            <div class="firma-copyright">
+                2026 Agosto. Calendario y Agenda - Alexander Wolfgang Ochsenius Geis con asistencia de IA.
+            </div>
+        </div>
+    </div>
+
+    <script src="calendario.js"></script>
+</body>
+</html>
