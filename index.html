@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clima de Chile - Observatorio Meteorológico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+        <div class="gp-header">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Greenpeace_logo.svg" alt="Logo de Greenpeace" class="gp-logo">
+            <p class="climate-legend">🌍 Es el cambio climático</p>
+            <a href="https://www.greenpeace.org/chile/" target="_blank" rel="noopener" class="gp-link">
+                Visita Greenpeace Chile
+            </a>
+        </div>
+
+        <!-- NUEVO: Enlace para volver al menú principal -->
+        <div class="back-link">
+            <a href="main.html">⬅ Volver al menú principal</a>
+        </div>
+
+        <h2>Clima en Chile</h2>
+        <form id="weatherForm">
+            <label for="regionSelect">Región:</label>
+            <select id="regionSelect" required>
+                <option value="">Selecciona una Región</option>
+            </select>
+
+            <label for="communeSelect">Comuna:</label>
+            <select id="communeSelect" required disabled>
+                <option value="">Primero selecciona una región</option>
+            </select>
+
+            <label for="periodSelect">Periodo:</label>
+            <select id="periodSelect" required>
+                <option value="today">Clima de hoy</option>
+                <option value="week">Clima de la semana (próximos 5 días)</option>
+            </select>
+
+            <button type="submit">Consultar Clima</button>
+        </form>
+
+        <div id="weatherResult">
+            Selecciona una ubicación para ver el clima.
+        </div>
+
+        <button type="button" id="backButton" style="display:none;">
+            ⬅ Volver al menú principal
+        </button>
+
+        <footer>
+            <a id="mapLink" href="#" target="_blank" rel="noopener" style="display:none;">
+                📍 Ver ubicación (lat/lon) en el mapa
+            </a>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
