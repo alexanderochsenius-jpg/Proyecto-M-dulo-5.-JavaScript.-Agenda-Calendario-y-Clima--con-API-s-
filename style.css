@@ -1,0 +1,166 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background: url('https://www.greenpeace.org/static/planet4-chile-stateless/2023/05/7376c8c3-glaciar-ventisquero-colgante-queulat.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.container {
+    position: relative;
+    background: #4dd0e1;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    z-index: 1;
+}
+
+/* --- NUEVO: enlace para volver al menú --- */
+.back-link {
+    text-align: left;
+    margin-bottom: 10px;
+}
+.back-link a {
+    color: #0d3b3a;
+    font-weight: bold;
+    text-decoration: none;
+}
+.back-link a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+.gp-header {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+}
+
+.gp-logo {
+    max-width: 130px;
+    height: auto;
+    display: block;
+    margin: 0 auto 8px auto;
+}
+
+.climate-legend {
+    margin: 4px 0;
+    font-weight: bold;
+    font-style: italic;
+    color: #1b3b3a;
+    font-size: 14px;
+}
+
+.gp-link {
+    display: inline-block;
+    font-size: 13px;
+    color: #0d3b3a;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.gp-link:hover {
+    color: #062120;
+}
+
+label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+select, button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #1b5e20;
+}
+
+/* Al presionar o seleccionar un botón: borde rojo levemente más grueso */
+button:active,
+button:focus {
+    outline: none;
+    border: 3px solid #d32f2f;
+    transform: scale(1.02);
+}
+
+#backButton {
+    background-color: #607d8b;
+    margin-top: 12px;
+}
+
+#backButton:hover {
+    background-color: #455a64;
+}
+
+#weatherResult {
+    margin-top: 20px;
+    padding: 12px;
+    background: #ecf0f1;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: left;
+    color: #333;
+}
+
+.error { color: #d32f2f; }
+.loading { color: #1976d2; }
+
+footer {
+    margin-top: 15px;
+}
+
+footer a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
